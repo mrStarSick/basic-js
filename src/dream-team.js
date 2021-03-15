@@ -11,16 +11,16 @@ module.exports = function createDreamTeam(members) {
         return false;
     }
     for (let i = 0; i < members.length; i++) {
-        if (members[i] != null) {
+        if (typeof members2[i] === 'string' || members[i] != null) {
             members2.push(members[i].trim().toUpperCase())
         }
     }
     members2.sort();
 
     for (let i = 0; i < members2.length; i++) {
-        if (typeof members2[i] === 'string') {
-            members3.push(members2[i])
-        }
+
+        members3.push(members2[i])
+
 
     }
     for (let i = 0; i < members2.length; i++) {
